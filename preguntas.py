@@ -25,7 +25,7 @@ def pregunta_01():
     from sklearn.preprocessing import OrdinalEncoder
 
     # Transforme las variables de entrada usando fit_transform
-    X = OrdinalEncoder().fit(X)
+    X = OrdinalEncoder().fit_transform(X)
 
     # Importe KNeighborsClassifier de sklearn.neighbors
     from sklearn.neighbors import KNeighborsClassifier
@@ -59,7 +59,7 @@ def pregunta_02():
     from sklearn.preprocessing import OrdinalEncoder
 
     # Transforme las variables de entrada usando fit_transform
-    X = OrdinalEncoder().fit(X)
+    X = OrdinalEncoder().fit_transform(X)
 
     # Importe KNeighborsClassifier de sklearn.neighbors
     from sklearn.neighbors import KNeighborsClassifier
