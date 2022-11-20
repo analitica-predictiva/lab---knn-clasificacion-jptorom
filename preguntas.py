@@ -70,9 +70,11 @@ def pregunta_02():
 
     # Entrene el clasificador con el conjunto de entrenamiento
     knn.fit(X, y)
+    from sklearn.metrics import confusion_matrix
 
-    # Retorne el score del clasificador
-    return knn.score(X, y)
-
+    y_test_true = y[:]
+    X_test = X[:]
+    y_test_pred = knn.predict(X_test)
+    
     # Retorne la matriz de confusión
-    return confusion_matrix(X, y)
+    return confusion_matrix(y_test_true, y_test_pred)
